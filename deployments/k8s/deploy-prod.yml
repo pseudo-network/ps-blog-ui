@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ps-blog-ui
+  namespace: tf
+spec:
+  selector:
+    matchLabels:
+      app: ps-blog-ui
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: ps-blog-ui
+    spec:
+      containers:
+        - name: ps-blog-ui
+          image: gcr.io/sylvan-bonbon-317613/ps-blog-ui:0.0.0
+          env:
+            - name: ENV
+              value: "prod"

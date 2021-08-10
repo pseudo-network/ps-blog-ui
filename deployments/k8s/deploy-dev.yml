@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ps-blog-ui
+spec:
+  selector:
+    matchLabels:
+      app: ps-blog-ui
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: ps-blog-ui
+    spec:
+      containers:
+        - name: ps-blog-ui
+          image: gcr.io/sylvan-bonbon-317613/ps-blog-ui:0.0.25
+          env:
+            - name: ENV
+              value: "dev"
