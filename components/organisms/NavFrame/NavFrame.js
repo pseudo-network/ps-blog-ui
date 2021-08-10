@@ -48,9 +48,11 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "1.5em",
     color: "#836AFF",
     marginBottom: "0px",
+    fontSize: "15px",
   },
   listItem: {
     // borderRadius: ".5rem",
+    fontSize: "15px",
     cursor: "pointer",
     fontFamily: theme.typography.regular,
   },

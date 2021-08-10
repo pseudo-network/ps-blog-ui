@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>PseudoCoin Blogs</title>
+        <title>Blog</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <NavFrame page={"Home"}>
